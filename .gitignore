@@ -1,0 +1,51 @@
+﻿# 🐍 Arquivos Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Ambientes virtuais
+venv/
+.env/
+.envrc
+
+# IDEs e editores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Arquivos de log e cache
+*.log
+*.tmp
+*.bak
+*.swp
+.cache/
+
+# Arquivos de testes
+.coverage
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Arquivos de pacotes e builds
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# 🎥 Arquivos de vídeo
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.flv
+*.wmv
+*.webm
