@@ -9,7 +9,7 @@ Este script combina três camadas de vídeo:
 2. Um vídeo intermediário transparente (overlay)
 3. Um vídeo específico menor posicionado em um local determinado
 
-Autor: Manus AI
+Autor: Manus AI and a human too
 Data: 22/05/2025 (modificado em 23/05/2025)
 """
 
@@ -32,7 +32,7 @@ def extrair_prefixo(texto):
 
 
 def create_final_screen(background_video_path, specific_video_path, overlay_video_path, output_path,
-                        duration=20, resolution=(1280, 720),
+                        duration=20, resolution=(1920, 1080),
                         specific_video_width=469, specific_video_position=(733.5, 398.8)):
     """
     Cria uma tela final combinando três camadas de vídeo.
@@ -84,8 +84,8 @@ def create_final_screen(background_video_path, specific_video_path, overlay_vide
         # Combina os vídeos
         final_clip = CompositeVideoClip([
             background_clip,
-            overlay_clip,
-            specific_clip
+            specific_clip,
+            overlay_clip
         ], size=resolution).with_duration(duration)
 
         # Salva o resultado
@@ -113,7 +113,7 @@ def create_final_screen(background_video_path, specific_video_path, overlay_vide
 
 
 def process_videos(background_folder, specific_folder, overlay_video_path, output_folder,
-                  duration=20, resolution=(1280, 720),
+                  duration=20, resolution=(1920, 1080),
                   specific_video_width=469, specific_video_position=(733.5, 398.8)):
     """
     Processa todos os vídeos nas pastas especificadas, associando o vídeo de fundo pelo prefixo textual.
@@ -217,9 +217,9 @@ def main():
         overlay_video_path,
         output_folder,
         duration=20,
-        resolution=(1280, 720),
-        specific_video_width=469,
-        specific_video_position=(733.5, 398.8)
+        resolution=(1920, 1080),
+        specific_video_width=709, #477
+        specific_video_position=(1100, 596) # (729, 396)
     )
 
     print(f"\nProcessamento concluído. {success_count} vídeos processados com sucesso.")
